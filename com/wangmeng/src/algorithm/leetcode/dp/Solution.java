@@ -1,4 +1,4 @@
-package com.leetcode.dp;
+package algorithm.leetcode.dp;
 
 /**
  * @ClassName Solution

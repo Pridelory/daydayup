@@ -1,4 +1,4 @@
-package com.leetcode.math;
+package algorithm.leetcode.math;
 
 /**
  * @ClassName Pow

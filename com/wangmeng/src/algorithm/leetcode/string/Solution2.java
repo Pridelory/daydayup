@@ -1,4 +1,4 @@
-package com.leetcode.string;
+package algorithm.leetcode.string;
 
 /**
  * @ClassName Solution2

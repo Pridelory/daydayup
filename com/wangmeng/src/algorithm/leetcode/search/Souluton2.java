@@ -1,4 +1,4 @@
-package com.leetcode.search;
+package algorithm.leetcode.search;
 
 /**
  * @ClassName Souluton2

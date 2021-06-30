@@ -1,4 +1,4 @@
-package com.leetcode.bit;
+package algorithm.leetcode.bit;
 
 /**
  * @ClassName HammingWeight

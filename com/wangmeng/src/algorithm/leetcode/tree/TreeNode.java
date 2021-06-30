@@ -1,4 +1,4 @@
-package com.leetcode.tree;
+package algorithm.leetcode.tree;
 
 /**
  * @ClassName TreeNode

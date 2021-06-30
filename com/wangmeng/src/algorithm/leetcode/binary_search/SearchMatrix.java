@@ -1,4 +1,4 @@
-package com.leetcode.binary_search;
+package algorithm.leetcode.binary_search;
 
 /**
  * @ClassName SearchMatrix
