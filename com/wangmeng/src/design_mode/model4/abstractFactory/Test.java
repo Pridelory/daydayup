@@ -1,9 +1,9 @@
 package design_mode.model4.abstractFactory;
 
-import model4.abstractFactory.pizza.Pizza;
-import model4.abstractFactory.pizzaStore.ChicagoPizzaStore;
-import model4.abstractFactory.pizzaStore.NYPizzaStore;
-import model4.abstractFactory.pizzaStore.PizzaStore;
+import design_mode.model4.abstractFactory.pizza.Pizza;
+import design_mode.model4.abstractFactory.pizzaStore.ChicagoPizzaStore;
+import design_mode.model4.abstractFactory.pizzaStore.NYPizzaStore;
+import design_mode.model4.abstractFactory.pizzaStore.PizzaStore;
 
 public class Test {
     public static void main(String[] args) {

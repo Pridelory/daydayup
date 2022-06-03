@@ -12,7 +12,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] array = new int[]{1,4,14,16,23,45,67,94};
         int len = array.length;
-        System.out.println(new BinarySearch().binarySearchRecursively(array, 0, len - 1, 15));
+        System.out.println(new BinarySearch().binarySearch(array,  15));
     }
 
     /**
@@ -25,7 +25,7 @@ public class BinarySearch {
         int i = 0;
         int j = array.length - 1;
         while (i <= j) {
-            int mid = i + (j - i + 1) / 2;
+            int mid = i + (j - i) / 2;
             if (array[mid] == target) {
                 return true;
             } else if (array[mid] < target) {

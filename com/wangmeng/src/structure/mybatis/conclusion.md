@@ -177,5 +177,69 @@ Cache就是一个接口 就是set和get 同时其隐藏了很多细节
 
 （回看）
 
+##  StatementHandler定义与结构
+
+![Screen Shot 2021-07-02 at 3.02.59 PM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-02 at 3.02.59 PM.png)
+
+StatementHandler结构
+
+![Screen Shot 2021-07-03 at 10.25.20 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 10.25.20 AM.png)
+
+prepared statementhandler更安全
+
+## Prepared statementhandler执行流程
+
+流程：执行、预编译、设置参数、执行JDBC、结果集映射成JAVA Bean
+
+后四个步骤都是在statementHandler里完成的
+
+时序图如下：
+
+![Screen Shot 2021-07-03 at 10.37.56 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 10.37.56 AM.png)
+
+代码：先从Executor的doQuery()方法起
+
+![Screen Shot 2021-07-03 at 11.05.07 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 11.05.07 AM.png)
+
+通过Configuration对象调用newStatementHandler()方法获取到一个StatementHandler对象，然后通过prepareStatement方法获取一个Statement，最后执行查询。
+
+newStatementHandler()方法如下![Screen Shot 2021-07-03 at 11.07.24 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 11.07.24 AM.png)
+
+调用RoutingStatementHandler()方法![Screen Shot 2021-07-03 at 11.07.55 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 11.07.55 AM.png)
+
+获取到对应的StatementHandler。
+
+prepareStatement()方法如下：![Screen Shot 2021-07-03 at 11.09.19 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 11.09.19 AM.png)
+
+prepare()方法如下：
+
+![Screen Shot 2021-07-03 at 11.11.57 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 11.11.57 AM.png)
+
+instantiateStatement()是在BaseStatementHandler类中的一个抽象方法，具体实现在PreparedStatementHandler类中实现。
+
+## 参数设置流程
+
+在prepareStatement()方法中的handler.parameterize(stmt)进行参数设置。
+
+![Screen Shot 2021-07-03 at 11.18.12 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 11.18.12 AM.png)
+
+参数设置交给ParameterHandler处理（进行参数映射）
+
+## 参数转换过程
+
+![Screen Shot 2021-07-03 at 11.30.57 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-03 at 11.30.57 AM.png)
+
+
+
+## ParameterHandler参数映射处理
+
+ 回看及debug源码
+
+## 结果集处理
+
+![Screen Shot 2021-07-10 at 11.25.58 AM](/Users/wangmeng/Library/Application Support/typora-user-images/Screen Shot 2021-07-10 at 11.25.58 AM.png)
+
+## 结果集转换过程
+
  
 

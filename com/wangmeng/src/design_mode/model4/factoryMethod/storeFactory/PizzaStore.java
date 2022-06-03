@@ -1,6 +1,6 @@
 package design_mode.model4.factoryMethod.storeFactory;
 
-import model4.factoryMethod.pizza.Pizza;
+import design_mode.model4.factoryMethod.pizza.Pizza;
 
 /**
  * pizza工厂的抽象类

@@ -1,8 +1,7 @@
-package algorithm.leetcode.basic;
+package algorithm.leetcode.basic.queue;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -30,12 +29,18 @@ public class StackAndQueue {
      * stack 2
      *
      * 用LinkedList实现栈
+     *
+     * offer是塞入元素
+     * peek 是取值但不弹出
+     * poll 是弹出并返回
+     *
      */
     public void stack2() {
         Deque<Integer> stack = new LinkedList<>();
         stack.offerLast(1);
         stack.offerLast(2);
-        System.out.println(stack.pollFirst());
+        stack.offerLast(3);
+        System.out.println(stack.pollLast());
     }
 
     /**

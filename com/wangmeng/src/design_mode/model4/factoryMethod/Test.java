@@ -1,8 +1,9 @@
 package design_mode.model4.factoryMethod;
 
-import model4.factoryMethod.pizza.Pizza;
-import model4.factoryMethod.storeFactory.NYPizzaStore;
-import model4.factoryMethod.storeFactory.PizzaStore;
+
+import design_mode.model4.factoryMethod.pizza.Pizza;
+import design_mode.model4.factoryMethod.storeFactory.NYPizzaStore;
+import design_mode.model4.factoryMethod.storeFactory.PizzaStore;
 
 public class Test {
     public static void main(String[] args) {

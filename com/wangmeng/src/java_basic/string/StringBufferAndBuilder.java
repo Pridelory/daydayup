@@ -13,6 +13,8 @@ package java_basic.string;
  */
 public class StringBufferAndBuilder {
     public static void main(String[] args) {
-        new StringBuilder();
+        StringBuilder sb = new StringBuilder("abcde");
+        StringBuilder sbReverse = sb.reverse();
+        System.out.println(sbReverse.toString());
     }
 }

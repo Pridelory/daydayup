@@ -1,7 +1,7 @@
 package design_mode.model4.factoryMethod.storeFactory;
 
-import model4.factoryMethod.pizza.ChicagoStyleCheesePizza;
-import model4.factoryMethod.pizza.Pizza;
+import design_mode.model4.factoryMethod.pizza.ChicagoStyleCheesePizza;
+import design_mode.model4.factoryMethod.pizza.Pizza;
 
 /**
  * 芝加哥披萨工厂
